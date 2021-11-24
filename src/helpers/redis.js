@@ -1,13 +1,13 @@
 const redis = require("redis");
 const {
   REDIS_HOSTNAME,
-  REDIS__PORT,
+  REDIS_PORT,
   REDIS_PASSWORD,
 } = require("../helpers/env");
 
 const client = redis.createClient({
   host: REDIS_HOSTNAME,
-  port: REDIS__PORT,
+  port: REDIS_PORT,
   password: REDIS_PASSWORD,
 });
 

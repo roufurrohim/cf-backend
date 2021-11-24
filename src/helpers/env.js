@@ -7,7 +7,7 @@ const env = {
   DB_PASSWORD: process.env.DB_PASSWORD,
   KEY_SECRET: process.env.KEY_SECRET,
   REDIS_HOSTNAME: process.env.REDIS_HOSTNAME,
-  REDIS__PORT: process.env.REDIS__PORT,
+  REDIS_PORT: process.env.REDIS_PORT,
   REDIS_PASSWORD: process.env.REDIS_PASSWORD,
 };
 
