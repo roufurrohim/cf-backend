@@ -5,7 +5,7 @@ Cara instalasi sebagai berikut:
 - Clone repository ini
 
 ```cli
-git clone https://github.com/roufurrohim/tester
+git clone https://github.com/roufurrohim/cf-backend.git
 ```
 
 - Instalasi depedensi :
@@ -40,4 +40,7 @@ DB_USERNAME=
 DB_NAME=
 DB_PASSWORD= 
 KEY_SECRET=
+REDIS_HOSTNAME=
+REDIS_PORT=
+REDIS_PASSWORD=
 ```
