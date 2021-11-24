@@ -2,8 +2,17 @@ const redis = require("redis");
 const _ = require("lodash");
 const transactionModel = require("../models/transaction_model");
 const { success, failed } = require("../helpers/response");
+const {
+  REDIS_HOSTNAME,
+  REDIS_PORT,
+  REDIS_PASSWORD,
+} = require("../helpers/env");
 
-const client = redis.createClient();
+const client = redis.createClient({
+  host: REDIS_HOSTNAME,
+  port: REDIS_PORT,
+  password: REDIS_PASSWORD,
+});
 const redisAction = require("../helpers/redis");
 
 const transaction = {

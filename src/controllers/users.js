@@ -5,16 +5,20 @@ const _ = require("lodash");
 const fs = require("fs");
 const usersModel = require("../models/users_model");
 const { KEY_SECRET } = require("../helpers/env");
+const {
+  REDIS_HOSTNAME,
+  REDIS_PORT,
+  REDIS_PASSWORD,
+} = require("../helpers/env");
 
-const client = redis.createClient();
+const client = redis.createClient({
+  host: REDIS_HOSTNAME,
+  port: REDIS_PORT,
+  password: REDIS_PASSWORD,
+});
 const redisAction = require("../helpers/redis");
 
-const {
-  success,
-  failed,
-  errLogin,
-  sucLog,
-} = require("../helpers/response");
+const { success, failed, errLogin, sucLog } = require("../helpers/response");
 
 const users = {
   getList: (req, res) => {
