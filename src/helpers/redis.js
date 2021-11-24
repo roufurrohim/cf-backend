@@ -1,11 +1,17 @@
-const redis = require('redis');
+const redis = require("redis");
+const {
+  REDIS_HOSTNAME,
+  REDIS__PORT,
+  REDIS_PASSWORD,
+} = require("../helpers/env");
 
 const client = redis.createClient({
-  host: '127.0.0.1',
-  port: 6379,
+  host: REDIS_HOSTNAME,
+  port: REDIS__PORT,
+  password: REDIS_PASSWORD,
 });
 
-client.on('error', (err) => {
+client.on("error", (err) => {
   // eslint-disable-next-line no-console
   console.log(err);
 });
