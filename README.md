@@ -11,8 +11,7 @@ git clone https://github.com/roufurrohim/cf-backend.git
 - Instalasi depedensi :
 
 ```
-npm init
-npm install express body-parser dot-env mysql2 nodemon
+npm install
 ```
 
 ## API DOCUMENTATION
